@@ -8,3 +8,12 @@ header{
  background-image: url("https://i.ibb.co/MMr6L4G/102078004-patr-n-de-pizza-fondo-de-pizza-en-estilo-de-dibujo-ilustraci-n-vectorial.jpg");
  color: rgb(255, 255, 255);
 }
+
+.container-main{
+ display: flex;
+ flex-direction:row;
+ margin: 30px;
+ text-align: center;
+ justify-content: center;
+ justify-content: space-between;
+}

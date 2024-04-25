@@ -11,7 +11,7 @@ const Nav = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className='justify-content-end'>
           <Navbar.Text>
-            <FontAwesomeIcon icon={faCartShopping} /><strong>  $12.345</strong> 
+            <FontAwesomeIcon icon={faCartShopping} /><strong>  $12.345</strong>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
