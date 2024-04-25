@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home, Pizza, Cart, Details, NotFound } from './views'
+import Nav from './components/Nav'
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/pizzas' element={<Pizza />} />
