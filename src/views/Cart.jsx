@@ -1,15 +1,17 @@
 import { useContext } from 'react'
 import { DataProvider } from '../context/Context'
 import { useNavigate } from 'react-router-dom'
+import Payment from '../components/Payment'
 
 const Cart = () => {
   const navigate = useNavigate()
-  const { setTotal, total, cart, upCount, donwCount, eraseCart, payCart } = useContext(DataProvider)
+  const { setTotal, total, cart, upCount, donwCount, eraseCart } = useContext(DataProvider)
   const totalCart = cart.reduce(
     (acum, actualValu) => acum + actualValu.price * actualValu.count,
     0
   )
   setTotal(totalCart)
+
   return (
     <div className='container'>
       <h5>Detalle del Pedido</h5>
@@ -36,8 +38,7 @@ const Cart = () => {
       <button className='btn btn-danger' onClick={() => eraseCart()}>Limpiar</button>
       <button className='btn btn-primary' onClick={() => navigate('/')}>Volver</button>
       <hr />
-      <button className='btn btn-success' onClick={() => payCart()}>Pagar</button>
-
+      <Payment />
     </div>
   )
 }

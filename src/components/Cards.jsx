@@ -7,7 +7,7 @@ import { DataProvider } from '../context/Context'
 
 const Cards = ({ pizza }) => {
   const navigate = useNavigate()
-  const { pizzas, addPizza, pizzaDetails, setPizzaDetails } = useContext(DataProvider)
+  const { pizzas, addPizza, setPizzaDetails } = useContext(DataProvider)
   const { id } = useParams()
 
   const getPizza = () => {

@@ -19,10 +19,10 @@ const ContPizza = ({ children }) => {
   }, [])
 
   const addPizza = ({ id, price, name, img, desc }) => {
-    const pizzaAdded = cart.find(pizza => pizza.id === id)
+    const pizzaAdded = cart.find((pizza) => pizza.id === id)
     const newAdded = { id, price, name, img, desc, count: 1 }
     if (pizzaAdded !== undefined) {
-      cart[cart.findIndex(pizza => pizza.id === newAdded.id)].count++
+      cart[cart.findIndex((pizza) => pizza.id === newAdded.id)].count++
       setCart([...cart])
     } else {
       setCart([...cart, newAdded])
@@ -48,15 +48,23 @@ const ContPizza = ({ children }) => {
     setCart([])
   }
 
-  const payCart = () => {
-    total !== 0 ? console.log('Gracias pos su compra') : console.log(' por favor agregue artículos')
-  }
-
   return (
-    <DataProvider.Provider value={{ pizzas, addPizza, pizzaDetails, setPizzaDetails, cart, upCount, donwCount, eraseCart, payCart, setTotal, total }}>
+    <DataProvider.Provider
+      value={{
+        pizzas,
+        addPizza,
+        pizzaDetails,
+        setPizzaDetails,
+        cart,
+        upCount,
+        donwCount,
+        eraseCart,
+        setTotal,
+        total
+      }}
+    >
       {children}
     </DataProvider.Provider>
-
   )
 }
 

@@ -21,3 +21,8 @@ header{
  justify-content: center;
  justify-content: space-between;
 }
+
+.nav-link{
+ color: white;
+ font-size: 20px;
+}
